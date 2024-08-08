@@ -1,0 +1,12 @@
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
+npm init  /////Инициализируйте ваш npm-пакет внутри корневой директории проекта
+
+package.json:
+    "type": "module",
+
+chmod +x bin/say-hallo.js
+
+
+npm publish --dry-run

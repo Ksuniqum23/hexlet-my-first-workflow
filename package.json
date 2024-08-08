@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "hexlet-my-first-workflow": "bin/say-hallo.js"
+    "hexlet-my-first-workflow": "bin/say-hello.js",
+    "say-hello": "bin/say-hello.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

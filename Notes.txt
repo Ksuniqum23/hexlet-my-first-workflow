@@ -6,7 +6,7 @@ npm init  /////Инициализируйте ваш npm-пакет внутри
 package.json:
     "type": "module",
 
-chmod +x bin/say-hallo.js
+chmod +x bin/say-hello.js
 
 
 npm publish --dry-run

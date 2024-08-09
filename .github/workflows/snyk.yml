@@ -1,22 +1,11 @@
-name: snyk
-# on – определяет события, которые запускают воркфлоу
+name: Example workflow for Node using Snyk
 on: push
 jobs:
-  # build – произвольно выбранное имя задания
-  # их может быть больше одного
-  build:
-    # операционная система для работы воркфлоу
+  security:
     runs-on: ubuntu-latest
-    steps: # список шагов, которые надо выполнить
-      # экшен — выполняет какую-то задачу
-      # checkout — клонирует репозиторий
-      - uses: actions/checkout@main
+    steps:
+      - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
-      - uses: snyk/actions/checkout@main
-        continue-on-error: true
-      # run – произвольная bash-команда
-      # ls -la выведет содержимое текущего репозитория
+        uses: snyk/actions/node@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-          with:
-            args: --severity-threshold=high
